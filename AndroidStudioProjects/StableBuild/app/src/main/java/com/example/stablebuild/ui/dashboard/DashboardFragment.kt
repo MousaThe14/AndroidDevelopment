@@ -1,42 +1,48 @@
 package com.example.stablebuild.ui.dashboard
 
 import android.os.Bundle
+import android.webkit.WebView
+import android.webkit.WebViewClient
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import com.example.stablebuild.R
 import com.example.stablebuild.databinding.FragmentDashboardBinding
 
 class DashboardFragment : Fragment() {
-
-    private var _binding: FragmentDashboardBinding? = null
-
-    // This property is only valid between onCreateView and
-    // onDestroyView.
-    private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val dashboardViewModel =
-            ViewModelProvider(this).get(DashboardViewModel::class.java)
-
-        _binding = FragmentDashboardBinding.inflate(inflater, container, false)
-        val root: View = binding.root
-
-        val textView: TextView = binding.textDashboard
-        dashboardViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
-        }
-        return root
+        return inflater.inflate(R.layout.fragment_dashboard, container, false)
     }
 
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
+    //
+
+    override fun onViewCreated(view: View, savedInstanceStance: Bundle?){
+        val excursionpage: WebView = view.findViewById(R.id.excursions)
+        excursionpage.webViewClient = object: WebViewClient(){
+            @Deprecated("Deprecated in Java")
+            override fun shouldOverrideUrlLoading(
+                view: WebView?,
+                request: String
+
+            ): Boolean {
+                if (view != null) {
+                    view.loadUrl(request)
+                }
+                return true
+            }
+        }
+        excursionpage.loadUrl("https://www.lovevamarkets.org/blog")
+        excursionpage.settings.javaScriptEnabled = true
+        excursionpage.settings.allowContentAccess = true
+        excursionpage.settings.domStorageEnabled = true
+        excursionpage.settings.useWideViewPort = true
     }
 }

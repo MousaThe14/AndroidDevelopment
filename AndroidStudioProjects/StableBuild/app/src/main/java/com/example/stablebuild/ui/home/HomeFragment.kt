@@ -1,42 +1,80 @@
+//Fragment solution sourced from Stack Overflow:
+// https://stackoverflow.com/questions/65401994/webview-in-fragment-doesnt-load-any-webpage-kotlin-android
+
+
+
 package com.example.stablebuild.ui.home
 
 import android.os.Bundle
+import android.webkit.WebView
+import android.webkit.WebViewClient
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.webkit.WebResourceRequest
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.databinding.DataBindingUtil
+import com.example.stablebuild.R
+import android.webkit.WebSettings
+import com.example.stablebuild.R.layout
 import com.example.stablebuild.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment() {
 
-    private var _binding: FragmentHomeBinding? = null
+    // private var _binding: FragmentHomeBinding? = null
+
 
     // This property is only valid between onCreateView and
     // onDestroyView.
-    private val binding get() = _binding!!
+  //  private val binding get() = _binding!!
+  //  private lateinit var _binding: FragmentHomeBinding
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val homeViewModel =
-            ViewModelProvider(this).get(HomeViewModel::class.java)
-
-        _binding = FragmentHomeBinding.inflate(inflater, container, false)
-        val root: View = binding.root
-
-        val textView: TextView = binding.textHome
-        homeViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
-        }
-        return root
+        return inflater.inflate(R.layout.fragment_home, container, false)
     }
 
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
+    //
+    //mappage.webViewClient = object : WebViewClient() {
+        override fun onViewCreated(view: View, savedInstanceStance: Bundle?){
+        val mappage: WebView = view.findViewById(R.id.map)
+            mappage.webViewClient = object: WebViewClient(){
+                override fun shouldOverrideUrlLoading(
+                    view: WebView?,
+                    request: String
+
+        ): Boolean {
+                    if (view != null) {
+                        view.loadUrl(request)
+                    }
+            return true
+        }
+    }
+        mappage.loadUrl("https://vafma.org/virginia-markets/")
+        mappage.settings.javaScriptEnabled = true
+        mappage.settings.allowContentAccess = true
+        mappage.settings.domStorageEnabled = true
+        mappage.settings.useWideViewPort = true
+        //_binding = FragmentHomeBinding.inflate(inflater, container, false)
+     //   val binding: FragmentHomeBinding = DataBindingUtil.setContentView(this, R.layout.fragment_home)
+
+        //binding.map.loadUrl("http://www.example.com")
+
+
+        //
+       //  val root: View = binding.root
+
+
+       // return root
+  //  }
+
+   // override fun onDestroyView() {
+      //  super.onDestroyView()
+      //  _binding = null
     }
 }
