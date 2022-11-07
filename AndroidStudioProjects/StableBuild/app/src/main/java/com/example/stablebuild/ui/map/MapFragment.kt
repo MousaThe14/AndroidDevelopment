@@ -3,7 +3,7 @@
 
 
 
-package com.example.stablebuild.ui.home
+package com.example.stablebuild.ui.map
 
 import android.os.Bundle
 import android.webkit.WebView
@@ -19,24 +19,24 @@ import androidx.databinding.DataBindingUtil
 import com.example.stablebuild.R
 import android.webkit.WebSettings
 import com.example.stablebuild.R.layout
-import com.example.stablebuild.databinding.FragmentHomeBinding
+import com.example.stablebuild.databinding.FragmentMapBinding
 
-class HomeFragment : Fragment() {
+class MapFragment : Fragment() {
 
-    // private var _binding: FragmentHomeBinding? = null
+    // private var _binding: FragmentMapBinding? = null
 
 
     // This property is only valid between onCreateView and
     // onDestroyView.
   //  private val binding get() = _binding!!
-  //  private lateinit var _binding: FragmentHomeBinding
+  //  private lateinit var _binding: FragmentMapBinding
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        return inflater.inflate(R.layout.fragment_home, container, false)
+        return inflater.inflate(R.layout.fragment_map, container, false)
     }
 
     //
@@ -60,8 +60,8 @@ class HomeFragment : Fragment() {
         mappage.settings.allowContentAccess = true
         mappage.settings.domStorageEnabled = true
         mappage.settings.useWideViewPort = true
-        //_binding = FragmentHomeBinding.inflate(inflater, container, false)
-     //   val binding: FragmentHomeBinding = DataBindingUtil.setContentView(this, R.layout.fragment_home)
+        //_binding = FragmentMapBinding.inflate(inflater, container, false)
+     //   val binding: FragmentMapBinding = DataBindingUtil.setContentView(this, R.layout.fragment_home)
 
         //binding.map.loadUrl("http://www.example.com")
 
