@@ -53,7 +53,7 @@ class MapFragment : Fragment() {
             return true
         }
     }
-        mappage.loadUrl("https://vafma.org/virginia-markets/")
+        mappage.loadUrl("https://marketspread.com/virginia/?stripped=1")
         mappage.settings.javaScriptEnabled = true
         mappage.settings.allowContentAccess = true
         mappage.settings.domStorageEnabled = true

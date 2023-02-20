@@ -12,10 +12,10 @@
         tools:layout="@layout/fragment_map" />
 
     <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="com.example.vafma.ui.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        android:id="@+id/navigation_excursions"
+        android:name="com.example.vafma.ui.excursions.ExcursionsFragment"
+        android:label="@string/title_excursions"
+        tools:layout="@layout/fragment_excursions" />
 
 
     <fragment
@@ -26,9 +26,9 @@
 
     <fragment
         android:id="@+id/navigation_notifications"
-        android:name="com.example.vafma.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        android:name="com.example.vafma.ui.about.AboutFragment"
+        android:label="@string/title_about"
+        tools:layout="@layout/fragment_about" />
 
 
     <fragment

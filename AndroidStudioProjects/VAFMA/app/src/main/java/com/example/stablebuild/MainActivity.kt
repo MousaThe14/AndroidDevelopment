@@ -8,6 +8,8 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.vafma.databinding.ActivityMainBinding
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
 
 class MainActivity : AppCompatActivity() {
 
@@ -26,7 +28,7 @@ class MainActivity : AppCompatActivity() {
         // menu should be considered as top level destinations.
         val appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.navigation_map, R.id.navigation_dashboard, R.id.navigation_notifications, R.id.navigation_drawing, R.id.navigation_login
+                R.id.navigation_map, R.id.navigation_excursions, R.id.navigation_about, R.id.navigation_drawing, R.id.navigation_login
             )
         )
         setupActionBarWithNavController(navController, appBarConfiguration)

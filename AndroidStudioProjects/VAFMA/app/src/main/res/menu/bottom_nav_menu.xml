@@ -7,9 +7,9 @@
         android:title="@string/title_map" />
 
     <item
-        android:id="@+id/navigation_dashboard"
+        android:id="@+id/navigation_excursions"
         android:icon="@drawable/ecoicon"
-        android:title="@string/title_dashboard" />
+        android:title="@string/title_excursions" />
 
     <item
         android:id="@+id/navigation_drawing"
@@ -18,9 +18,9 @@
 
 
     <item
-        android:id="@+id/navigation_notifications"
+        android:id="@+id/navigation_about"
         android:icon="@drawable/ic_baseline_about_us_24"
-        android:title="@string/title_notifications" />
+        android:title="@string/title_about" />
 
 
     <item

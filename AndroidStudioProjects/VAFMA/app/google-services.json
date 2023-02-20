@@ -1,40 +1,40 @@
 {
   "project_info": {
-    "project_number": "919030998167",
-    "project_id": "va-farmers-market",
-    "storage_bucket": "va-farmers-market.appspot.com"
+    "project_number": "175749668617",
+    "project_id": "va-farmers-market-f237b",
+    "storage_bucket": "va-farmers-market-f237b.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:919030998167:android:7e37bb8e9b47329635b5d2",
+        "mobilesdk_app_id": "1:175749668617:android:cccf7ecef2047642867dd8",
         "android_client_info": {
           "package_name": "com.example.vafma"
         }
       },
       "oauth_client": [
         {
-          "client_id": "919030998167-6job7ln06ii3is0hrfsic4ql8hfr4f8d.apps.googleusercontent.com",
+          "client_id": "175749668617-606isviok6jcbr1kjolri5ks22botftk.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDdosBZdD5b6JT9-_3Cw_-TRtMW9G4PfTo"
+          "current_key": "AIzaSyActDVxDzIXZolZMuWfKUg25mrKrRkURr8"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "919030998167-6job7ln06ii3is0hrfsic4ql8hfr4f8d.apps.googleusercontent.com",
+              "client_id": "175749668617-606isviok6jcbr1kjolri5ks22botftk.apps.googleusercontent.com",
               "client_type": 3
             },
             {
-              "client_id": "919030998167-bctoh2vnniv8n7tbsujlkl39mqst62qv.apps.googleusercontent.com",
+              "client_id": "175749668617-bsrf5a6gud47gohccu0eori99cq9m2l4.apps.googleusercontent.com",
               "client_type": 2,
               "ios_info": {
-                "bundle_id": "VA-Farmers.Virginia-Farmers-Market"
+                "bundle_id": "com.example.vafma"
               }
             }
           ]

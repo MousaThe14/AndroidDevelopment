@@ -18,11 +18,17 @@ import android.widget.Toast
 import com.example.vafma.databinding.FragmentLoginBinding
 
 import com.example.vafma.R
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.firestore.ktx.firestoreSettings
+import com.google.firebase.ktx.Firebase
 
 class LoginFragment : Fragment() {
 
+
+
     private lateinit var loginViewModel: LoginViewModel
     private var _binding: FragmentLoginBinding? = null
+
 
     // This property is only valid between onCreateView and
     // onDestroyView.
