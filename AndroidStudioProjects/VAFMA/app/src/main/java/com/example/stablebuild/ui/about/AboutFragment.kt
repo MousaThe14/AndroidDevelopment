@@ -12,36 +12,6 @@ import androidx.lifecycle.ViewModelProvider
 import com.example.vafma.R
 import com.example.vafma.databinding.FragmentAboutBinding
 
-class AboutFragment : Fragment() {
+class AboutFragment : Fragment(R.layout.fragment_about) {
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View {
-        return inflater.inflate(R.layout.fragment_about, container, false)
-    }
-
-    //
-
-    override fun onViewCreated(view: View, savedInstanceStance: Bundle?){
-        val aboutpage: WebView = view.findViewById(R.id.about)
-        aboutpage.webViewClient = object: WebViewClient(){
-            override fun shouldOverrideUrlLoading(
-                view: WebView?,
-                request: String
-
-            ): Boolean {
-                if (view != null) {
-                    view.loadUrl(request)
-                }
-                return true
-            }
-        }
-        aboutpage.loadUrl("https://vafma.org/about/")
-        aboutpage.settings.javaScriptEnabled = true
-        aboutpage.settings.allowContentAccess = true
-        aboutpage.settings.domStorageEnabled = true
-        aboutpage.settings.useWideViewPort = true
-    }
 }

@@ -25,16 +25,23 @@
         tools:layout="@layout/fragment_drawing" />
 
     <fragment
-        android:id="@+id/navigation_notifications"
+        android:id="@+id/navigation_about"
         android:name="com.example.vafma.ui.about.AboutFragment"
         android:label="@string/title_about"
         tools:layout="@layout/fragment_about" />
 
 
-    <fragment
-        android:id="@+id/navigation_login"
-        android:name="com.example.vafma.ui.login.LoginFragment"
-        android:label="@string/title_login"
-        tools:layout="@layout/fragment_login" />
+    <!--<fragment
+      android:id="@+id/navigation_login"
+      android:name="com.example.vafma.ui.login.LoginFragment"
+      android:label="@string/title_login"
+      tools:layout="@layout/fragment_login" />
+
+
+  <fragment
+      android:id="@+id/navigation_coupons"
+      android:name="com.example.stablebuild.ui.coupons.CouponFragment"
+      android:label="@string/title_coupons"
+      tools:layout="@layout/fragment_coupon" /> -->
 
 </navigation>

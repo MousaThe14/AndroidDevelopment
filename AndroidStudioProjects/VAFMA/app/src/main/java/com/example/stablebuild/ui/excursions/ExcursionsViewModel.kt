@@ -1,4 +1,4 @@
-package com.example.vafma.ui.VAFMAd
+package com.example.vafma.ui.vafmad
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
